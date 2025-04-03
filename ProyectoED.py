@@ -18,8 +18,6 @@ def LeerPartidos():
 
 def impClasificacion(lista):
 
-
-
     for i in lista:
         liga=lista
 
