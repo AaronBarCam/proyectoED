@@ -6,8 +6,7 @@ liga = {}
 MatchList=[]
 
 def LeerPartidos():
-    global liga
-    with open("liga.csv") as file:
+   with open("liga.csv") as file:
         datos = csv.reader(file)
         next(datos)
 
