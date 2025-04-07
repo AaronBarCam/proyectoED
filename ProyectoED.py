@@ -24,4 +24,18 @@ def impClasificacion(lista):
 
 LeerPartidos()
 impClasificacion(MatchList)         
+<<<<<<< HEAD
 equipos(liga)
+=======
+
+
+# def Equipos(datosliga):
+
+# def InfoEquipos(datosliga,equipos):
+
+# def QuienGana(resultado):
+
+# def Puntos(info):
+
+# def Clasificacion(datos):
+>>>>>>> 4a80979fda5626772ada90fdb2bc1df7e9721ec7
