@@ -15,7 +15,6 @@ def LeerPartidos():
             MatchList.append(data)
             liga=MatchList
 
-
 def impClasificacion(lista):
 
     for i in lista:
@@ -25,3 +24,4 @@ def impClasificacion(lista):
 
 LeerPartidos()
 impClasificacion(MatchList)         
+equipos(liga)
