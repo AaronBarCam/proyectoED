@@ -16,19 +16,26 @@ def LeerPartidos():
             liga=MatchList
         
     return liga
-#def impClasificacion(lista):
 
 equipos = LeerPartidos()
-
-
 print(equipos)
 
-# def Equipos(datosliga):
+#def impClasificacion(lista):
+
+
+def Equipos(datosliga):
+    equ
+
+Equipos(equipos)
+
 
 # def InfoEquipos(datosliga,equipos):
 
+
 # def QuienGana(resultado):
 
+
 # def Puntos(info):
+
 
 # def Clasificacion(datos):
