@@ -17,11 +17,16 @@ def LeerPartidos():
         
     return liga
 #def impClasificacion(lista):
+#    equipos=[]
+#    for i in lista:
+#        equipos.append({
+#            "equipo": i[1]
+#        })
 
-equipos = LeerPartidos()
+#    return equipos
+datos = LeerPartidos()
 
-
-print(equipos)
+#equipos= impClasificacion(datos)
 
 # def Equipos(datosliga):
 
