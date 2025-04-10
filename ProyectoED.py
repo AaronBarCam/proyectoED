@@ -40,15 +40,16 @@ def impClasificacion(lista):
     for i in equiposdatos:
         print(i)
 
-impClasificacion(datos)
+# impClasificacion(datos)
+
+def QuienGana(resultado):
+
+
+# def Puntos(info):
+
+# def Clasificacion(datos):
 
 
 # def InfoEquipos(datosliga,equipos):
 
 # InfoEquipos(datos, equiposdatos)
-
-# def QuienGana(resultado):
-
-# def Puntos(info):
-
-# def Clasificacion(datos):
