@@ -20,6 +20,8 @@ def LeerPartidos():
 # def impClasificacion(lista):
 
 datos = LeerPartidos()
+for i in datos:
+    print(i)
 
 # equipos= impClasificacion(datos)
 
@@ -28,13 +30,15 @@ def Equipos(datosliga):
     equipos=[]
     
     for i in datosliga:
-        equipos.append({
-            "equipo": i[1]
-        })
+        if i[1] not in equipos:
+            equipos.append(i[1])
+    
 
     return equipos
 
-Equipos(datos)
+equiposdatos = Equipos(datos)
+for i in equiposdatos:
+    print(i)
 
 # def InfoEquipos(datosliga,equipos):
 
