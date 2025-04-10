@@ -40,14 +40,26 @@ def impClasificacion(lista):
     for i in equiposdatos:
         print(i)
 
-impClasificacion(datos)
+#impClasificacion(datos)
 
 
 # def InfoEquipos(datosliga,equipos):
 
 # InfoEquipos(datos, equiposdatos)
 
-# def QuienGana(resultado):
+def QuienGana(resultado):
+
+    for i in datos:
+        ganador = i[4]
+        equipoGanador=ganador.split("-")
+        if int(equipoGanador[0])>int(equipoGanador[1]):
+            print("gana local")
+        elif int(equipoGanador[0])<int(equipoGanador[1]):
+            print("gana visitante")
+        elif int(equipoGanador[0])==int(equipoGanador[1]):
+            print("empatan")
+QuienGana(datos)
+
 
 # def Puntos(info):
 
