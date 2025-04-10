@@ -42,14 +42,36 @@ def impClasificacion(lista):
 
 # impClasificacion(datos)
 
+# def Puntos(info):
+
+# def Clasificacion(datos):
+
+# def InfoEquipos(datosliga,equipos):
+
+# InfoEquipos(datos, equiposdatos)
+
 def QuienGana(resultado):
+
+    for i in datos:
+        ganador = i[4]
+        equipoGanador=ganador.split("-")
+        if int(equipoGanador[0])>int(equipoGanador[1]):
+            print("gana local")
+            print("pierde visitante")
+            print("")
+
+        elif int(equipoGanador[0])<int(equipoGanador[1]):
+            print("gana visitante")
+            print("pierde local")
+            print("")
+
+        elif int(equipoGanador[0])==int(equipoGanador[1]):
+            print("empatan")
+            print("")
+
+QuienGana(datos)
 
 
 # def Puntos(info):
 
 # def Clasificacion(datos):
-
-
-# def InfoEquipos(datosliga,equipos):
-
-# InfoEquipos(datos, equiposdatos)
