@@ -31,17 +31,6 @@ def Equipos(datosliga):
     liguilla=[]
 
     for i in datosliga:
-<<<<<<< HEAD
-        nombreEquipo = i[1]
-        if nombreEquipo not in liguilla:
-            liguilla.append(nombreEquipo)
-            equipos.append({"equipos": nombreEquipo})
-
-    return equipos
-
-EquiposDatos = Equipos(datos)
-for i in EquiposDatos:
-=======
         if i[1] not in equipos:
             equipos.append(i[1])
     
@@ -50,7 +39,6 @@ for i in EquiposDatos:
 
 equiposdatos = Equipos(datos)
 for i in equiposdatos:
->>>>>>> 80cb9ec6cd054eed85d72b363712cad8860725dc
     print(i)
 
 # def InfoEquipos(datosliga,equipos):
