@@ -26,15 +26,19 @@ datos = LeerPartidos()
 def Equipos(datosliga):
 
     equipos=[]
-    
+    liguilla=[]
+
     for i in datosliga:
-        equipos.append({
-            "equipo": i[1]
-        })
+        nombreEquipo = i[1]
+        if nombreEquipo not in liguilla:
+            liguilla.append(nombreEquipo)
+            equipos.append({"equipos": nombreEquipo})
 
     return equipos
 
-Equipos(datos)
+EquiposDatos = Equipos(datos)
+for i in EquiposDatos:
+    print(i)
 
 # def InfoEquipos(datosliga,equipos):
 
