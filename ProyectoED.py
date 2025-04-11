@@ -2,7 +2,8 @@
 
 import csv
 
-
+# FUNCION LeerPartidos
+#--------------------------
 def LeerPartidos():
     MatchList=[]
     liga={}
@@ -19,6 +20,20 @@ def LeerPartidos():
 
 datos = LeerPartidos()
 
+
+# FUNCION impClasificacion
+#--------------------------
+def impClasificacion(lista):
+
+    equiposdatos = Equipos(lista)
+
+    print("EQUIPOS:")
+    for i in equiposdatos:
+        print(i)
+
+
+# FUNCION Equipos
+#--------------------------
 def Equipos(datosliga):
 
     equipos=[]
@@ -32,46 +47,41 @@ def Equipos(datosliga):
 equiposdatos = Equipos(datos)
 
 
-def impClasificacion(lista):
-
-    equiposdatos = Equipos(lista)
-
-    print("EQUIPOS:")
-    for i in equiposdatos:
-        print(i)
-
-# impClasificacion(datos)
-
-# def Puntos(info):
-
-# def Clasificacion(datos):
-
+# FUNCION InfoEquipos
+#--------------------------
 # def InfoEquipos(datosliga,equipos):
 
-# InfoEquipos(datos, equiposdatos)
 
+# FUNCION QuienGana
+#--------------------------
 def QuienGana(resultado):
 
     for i in datos:
         ganador = i[4]
         equipoGanador=ganador.split("-")
-        if int(equipoGanador[0])>int(equipoGanador[1]):
+
+        if int(equipoGanador[0]) > int(equipoGanador[1]):
             print("gana local")
             print("pierde visitante")
             print("")
 
-        elif int(equipoGanador[0])<int(equipoGanador[1]):
+        elif int(equipoGanador[0]) < int(equipoGanador[1]):
             print("gana visitante")
             print("pierde local")
             print("")
 
-        elif int(equipoGanador[0])==int(equipoGanador[1]):
+        elif int(equipoGanador[0]) == int(equipoGanador[1]):
             print("empatan")
             print("")
 
 QuienGana(datos)
 
 
+# FUNCION Puntos
+#--------------------------
 # def Puntos(info):
 
+
+# FUNCION Clasificacion
+#--------------------------
 # def Clasificacion(datos):
