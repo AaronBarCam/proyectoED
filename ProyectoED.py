@@ -54,34 +54,59 @@ equiposdatos = Equipos(datos)
 
 # FUNCION QuienGana
 #--------------------------
-def QuienGana(resultado):
-
-    for i in datos:
-        ganador = i[4]
-        equipoGanador=ganador.split("-")
-
-        if int(equipoGanador[0]) > int(equipoGanador[1]):
-            print("gana local")
-            print("pierde visitante")
-            print("")
-
-        elif int(equipoGanador[0]) < int(equipoGanador[1]):
-            print("gana visitante")
-            print("pierde local")
-            print("")
-
-        elif int(equipoGanador[0]) == int(equipoGanador[1]):
-            print("empatan")
-            print("")
-
-QuienGana(datos)
+# def QuienGana(resultado):
 
 
 # FUNCION Puntos
 #--------------------------
-# def Puntos(info):
+def Puntos(info):
 
+    ListaEquipos = {}
+
+    for i in info:
+        ganador = i[4]
+        equipoGanador = ganador.split("-")
+
+        equipo1 = i[1]
+        equipo2 = i[2]
+        
+        if int(equipoGanador[0]) > int(equipoGanador[1]):
+           
+            if equipo1 not in ListaEquipos:
+                ListaEquipos[equipo1] = 3
+            else:
+                ListaEquipos[equipo1] += 3
+        
+        elif int(equipoGanador[0]) < int(equipoGanador[1]):
+        
+            if equipo2 not in ListaEquipos:
+                ListaEquipos[equipo2] = 3
+            else:
+                ListaEquipos[equipo2] += 3
+        
+        elif int(equipoGanador[0]) == int(equipoGanador[1]):
+         
+            if equipo1 not in ListaEquipos:
+                ListaEquipos[equipo1] = 1
+            else:
+                ListaEquipos[equipo1] += 1
+
+            if equipo2 not in ListaEquipos:
+                ListaEquipos[equipo2] = 1
+            else:
+                ListaEquipos[equipo2] += 1
+
+    return ListaEquipos
+
+puntos = Puntos(datos)
 
 # FUNCION Clasificacion
 #--------------------------
-# def Clasificacion(datos):
+def Clasificacion(datos):
+
+    ordenado = dict(sorted(datos.items(), key=lambda item: item[1], reverse=True))
+
+    for i, j in ordenado.items():
+        print(f"{i} --> {j}")
+
+Clasificacion(puntos)
